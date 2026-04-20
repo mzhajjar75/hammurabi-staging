@@ -1,0 +1,4 @@
+[24-Feb-2026 03:19:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function plugin_basename() in /home/hydroec/public_html/hammurabilaws.com/wp-content/plugins/contact-form-7/wp-contact-form-7.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/hydroec/public_html/hammurabilaws.com/wp-content/plugins/contact-form-7/wp-contact-form-7.php on line 23
