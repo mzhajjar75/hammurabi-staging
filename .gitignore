@@ -1,0 +1,6 @@
+error_log
+wp-content/debug.log
+wp-content/cache/
+wp-content/uploads/
+.env
+.DS_Store
