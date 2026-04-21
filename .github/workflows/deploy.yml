@@ -17,7 +17,7 @@ jobs:
             exit 1
           fi
 
-      - name: SSH Deploy
+      - name: Deploy over SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: 65.108.132.247
@@ -28,6 +28,15 @@ jobs:
           script: |
             set -e
             cd /var/www/staging
+
+            echo "Current path:"
             pwd
-            git status
+
+            echo "Pulling latest code..."
             git pull origin main
+
+            echo "Fixing common permissions..."
+            find wp-content -type d -exec chmod 755 {} \;
+            find wp-content -type f -exec chmod 644 {} \;
+
+            echo "Deployment completed successfully."
